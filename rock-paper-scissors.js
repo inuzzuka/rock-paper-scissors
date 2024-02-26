@@ -1,4 +1,3 @@
-let clicked = 0;
 let score = JSON.parse(localStorage.getItem('score')) || {
   wins: 0,
   ties: 0,
@@ -96,16 +95,18 @@ for (let i = 0; i < buttons.length; i++) {
     },  750);
   });
 }
+
+
 function disableButton() {
   const buttons = document.querySelectorAll('button');
   
   for (let i = 0; i < buttons.length; i++) {
-    buttons[i].disabled = true; // Disable each button
+    buttons[i].disabled = true;
   }
   
   setTimeout(function() {
     for (let i = 0; i < buttons.length; i++) {
-      buttons[i].disabled = false; // Enable each button after 5 seconds
+      buttons[i].disabled = false;
     }
   }, 3000);
 }
